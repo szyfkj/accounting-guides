@@ -2,7 +2,7 @@
 
 Plain-language guides to bookkeeping and business tax for non-accountants, organised by country and language.
 
-**Site:** https://ituoo.com/accounting-guides/
+**Site:** https://szyfkj.github.io/accounting-guides/
 
 | Section | Languages |
 | --- | --- |
