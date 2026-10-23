@@ -1,0 +1,116 @@
+site_name: Accounting Guides
+site_description: Plain-language guides to bookkeeping and tax law for non-accountants, by country and language.
+site_url: https://phoenixluo.github.io/accounting-guides/
+repo_url: https://github.com/phoenixluo/accounting-guides
+repo_name: phoenixluo/accounting-guides
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Noto Sans
+  icon:
+    logo: material/book-open-variant
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: th
+          name: ภาษาไทย
+          build: true
+          site_name: คู่มือบัญชี
+          nav_translations:
+            Home: หน้าแรก
+            Accounting fundamentals: พื้นฐานการบัญชี
+            Countries: ประเทศ
+            Thailand: ประเทศไทย
+        - locale: zh
+          name: 中文
+          build: true
+          site_name: 会计指南
+          nav_translations:
+            Home: 首页
+            Accounting fundamentals: 会计基础
+            Countries: 国家
+            Thailand: 泰国
+
+nav:
+  - Home: index.md
+  - Accounting fundamentals:
+      - fundamentals/index.md
+      - fundamentals/why-accounting-matters.md
+      - fundamentals/accounting-equation.md
+      - fundamentals/debits-and-credits.md
+      - fundamentals/chart-of-accounts-and-ledgers.md
+      - fundamentals/accrual-and-depreciation.md
+      - fundamentals/financial-statements.md
+  - Countries:
+      - Thailand:
+          - thailand/index.md
+          - thailand/legal-framework.md
+          - thailand/corporate-income-tax.md
+          - thailand/vat.md
+          - thailand/withholding-tax.md
+          - thailand/payroll.md
+          - thailand/other-taxes.md
+          - thailand/documents.md
+          - thailand/journal-entries.md
+          - thailand/tax-calendar.md
+          - thailand/penalties-and-mistakes.md
+          - thailand/glossary.md
+          - thailand/resources.md
